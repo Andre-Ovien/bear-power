@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Bear Power
+{% endblock %}
+
+
+{% block body %}
+
+<!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>About Us</h3>
+            <h2>{{ about.title }}</h2>
+            <p>{{ about.description }}</p>
+            <div class="about-details mt-4">
+            <p>
+            At BearPower, we envision a future where energy is not just available, but truly sustainable. 
+            We specialize in solar energy installations for both residential and commercial clients — helping people break free from inconsistent power supply and rising utility bills.
+            </p>
+            <p>
+            From system design to full implementation and aftercare, our team handles every stage with precision and passion. We take pride in using high-efficiency solar panels, battery backups, and inverters that ensure long-term performance and durability.
+            </p>
+            <p>
+            As a company rooted in local challenges and global solutions, we’re on a mission to drive clean energy adoption across Nigeria and beyond — one rooftop at a time.
+            </p>
+          </div>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                  <h3>Efficient Installations</h3>
+                  <p>Our team delivers rapid, high-quality solar installations with minimal disruption and long-term reliability.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-battery-charging"></i>
+                  <h3>Energy Storage Solutions</h3>
+                  <p>Store excess solar power with high-efficiency battery systems for uninterrupted supply.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-globe2"></i>
+                  <h3>Off-Grid Capabilities</h3>
+                  <p>Go fully independent with systems designed for remote and underserved areas.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-headset"></i>
+                  <h3>Reliable Support</h3>
+                  <p>Our team is always ready to assist — before, during, and after installation.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+{% endblock  %}

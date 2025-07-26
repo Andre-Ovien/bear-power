@@ -1,0 +1,23 @@
+{% load static %}
+<!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="/media/{{ home.image }}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Bear Power</h2>
+            <p data-aos="fade-up" data-aos-delay="200">{{ home.description }}</p>
+          </div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
+            <form action="{% url 'subscribe_newsletter' %}" method="post">
+              {% csrf_token %}
+              <div class="sign-up-form"><input type="email" name="email" placeholder="Subscribe to our newsletter">
+              <input type="submit" style="background-color: #004F8B; color: white;" value="Subscribe"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->

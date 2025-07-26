@@ -1,0 +1,66 @@
+<!-- Gallery section -->
+    <section id="team" class="gallery section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="team-header" data-aos="fade-up" data-aos-delay="200">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h2>Gallery</h2>
+              <p>Ready to switch to clean, reliable solar energy? At BearPower, we’re committed to helping you take control of your energy needs with affordable, sustainable solutions. Let’s power your home or business for a brighter, greener future.</p>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-lg-end">
+              <div class="team-controls">
+                <button class="team-control-btn team-prev"><i class="bi bi-chevron-left"></i></button>
+                <button class="team-control-btn team-next"><i class="bi bi-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-slider swiper init-swiper" data-aos="fade-up" data-aos-delay="300">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 700,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "navigation": {
+                "nextEl": ".team-next",
+                "prevEl": ".team-prev"
+              },
+              "breakpoints": {
+                "576": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                },
+                "992": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 30
+                },
+                "1200": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 30
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            {% for rows in images %}
+            <div class="swiper-slide">
+              <div class="gallery-member">
+                <div class="member-image">
+                  <img src="/media/{{ rows.image }}" class="img-fluid" alt="" loading="lazy">
+                </div>
+              </div>
+            </div><!-- End slide item -->
+            {% endfor %}
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Team Section -->
