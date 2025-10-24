@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: BearPower
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: BearPower.wsgi
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: BearPower.settings
+      - key: PYTHON_VERSION
+        value: 3.12.6
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
+    autoDeploy: true
+    healthCheckPath: "/"
+
+databases:
+  - name: bearpower-db
+    plan: free
