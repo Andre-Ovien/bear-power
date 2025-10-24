@@ -6,6 +6,13 @@ It exposes the WSGI callable as a module-level variable named ``application``.
 For more information on this file, see
 https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
+import sys, traceback
+
+def show_traceback(exc_type, exc_value, tb):
+    traceback.print_exception(exc_type, exc_value, tb)
+    sys.__excepthook__(exc_type, exc_value, tb)
+
+sys.excepthook = show_traceback
 
 import os
 
