@@ -36,7 +36,7 @@ def subscribe_newsletter(request):
                 subject='New Newsletter Subscriber',
                 message=f'A new user has subscribed to your newsletter: {email}',
                 from_email=None,  
-                recipient_list=['bearpowernig@gmail.com'],  
+                recipient_list=['venrahq@gmail.com'],  
             )
 
             send_mail(
@@ -74,7 +74,7 @@ def contact(request):
                 subject=f"Contact Form: {subject}",
                 message=f"Name: {name}\nEmail: {email}\n\n{message}",
                 from_email=None,
-                recipient_list=['bearpowernig@gmail.com'],  
+                recipient_list=['venrahq@gmail.com'],  
             )
 
             
@@ -137,7 +137,7 @@ def contact_page(request):
                 subject=f"Contact Form: {subject}",
                 message=f"Name: {name}\nEmail: {email}\n\n{message}",
                 from_email=None,
-                recipient_list=['bearpowernig@gmail.com'],  
+                recipient_list=['venrahq@gmail.com'],  
             )
 
             
